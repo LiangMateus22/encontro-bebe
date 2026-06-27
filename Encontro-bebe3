@@ -1,0 +1,51 @@
+const naoBtn = document.getElementById("naoBtn");
+const simBtn = document.getElementById("simBtn");
+
+const tela1 = document.getElementById("tela1");
+const tela2 = document.getElementById("tela2");
+const tela3 = document.getElementById("tela3");
+const tela4 = document.getElementById("tela4");
+
+let dataEscolhida = "";
+let horaEscolhida = "";
+let comidaEscolhida = "";
+
+// Botão NÃO fugindo
+naoBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 100);
+
+  naoBtn.style.left = x + "px";
+  naoBtn.style.top = y + "px";
+});
+
+// Sim
+simBtn.addEventListener("click", () => {
+  tela1.classList.add("hidden");
+  tela2.classList.remove("hidden");
+});
+
+// Continuar
+document.getElementById("continuarBtn").addEventListener("click", () => {
+  dataEscolhida = document.getElementById("data").value;
+  horaEscolhida = document.getElementById("hora").value;
+
+  tela2.classList.add("hidden");
+  tela3.classList.remove("hidden");
+});
+
+// Escolha comida
+document.querySelectorAll(".food").forEach(item => {
+  item.addEventListener("click", () => {
+    comidaEscolhida = item.dataset.food;
+
+    tela3.classList.add("hidden");
+    tela4.classList.remove("hidden");
+
+    document.getElementById("resumo").innerHTML = `
+      Nosso encontro será no dia <strong>${dataEscolhida}</strong><br>
+      às <strong>${horaEscolhida}</strong><br>
+      e vamos comer <strong>${comidaEscolhida}</strong> 🍽️
+    `;
+  });
+});
