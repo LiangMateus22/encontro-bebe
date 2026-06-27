@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💖 Um convite especial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container" id="tela1">
+    <h1>Beatriz (Bebe) ❤️</h1>
+    <p class="texto">
+      Tenho uma perguntinha muito importante... 🥺<br><br>
+      Você aceita sair comigo?
+    </p>
+
+    <div class="botoes">
+      <button id="simBtn">💖 Sim</button>
+      <button id="naoBtn">🙈 Não</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="tela2">
+    <h2>Escolha o dia e a hora 💕</h2>
+
+    <label>Data:</label>
+    <input type="date" id="data">
+
+    <label>Hora:</label>
+    <input type="time" id="hora">
+
+    <button id="continuarBtn">Continuar ❤️</button>
+  </div>
+
+  <div class="container hidden" id="tela3">
+    <h2>Escolha o que vamos comer 🍽️</h2>
+
+    <div class="foods">
+
+      <div class="food" data-food="Sushi">🍣 Sushi</div>
+      <div class="food" data-food="Tacos">🌮 Tacos</div>
+      <div class="food" data-food="Kebab">🥙 Kebab</div>
+      <div class="food" data-food="Hambúrguer">🍔 Hambúrguer</div>
+      <div class="food" data-food="Churrasco">🥩 Churrasco</div>
+      <div class="food" data-food="Pizza">🍕 Pizza</div>
+
+    </div>
+  </div>
+
+  <div class="container hidden" id="tela4">
+    <h1>💖 Encontro marcado!</h1>
+
+    <p id="resumo"></p>
+
+    <p class="final">
+      Mal posso esperar para te encontrar. ❤️<br><br>
+      <strong>Com carinho,<br>Li &lt;3</strong>
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
